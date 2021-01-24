@@ -5,6 +5,10 @@
 
 - hash
 - union find
+
+type() vs isinstance()
+- type은 상속까지 검사한다. 더 많은 검사가 필요해 더 느리다.
+- isinstance는 지정된 객체 형태까지만 검사한다. 더 빠르긴 하지만, test 용도를 권고한다. (primitive type에서는 사용가능할듯)
 """
 import sys
 import typing
@@ -14,7 +18,7 @@ input = sys.stdin.readline
 
 
 def root(k):
-    if type(friends[k]) is int:
+    if isinstance(friends[k], int):
         return k
     friends[k] = root(friends[k])
     return friends[k]

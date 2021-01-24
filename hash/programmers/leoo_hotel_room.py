@@ -14,7 +14,7 @@ import typing
 setrecursionlimit(10 ** 9)
 
 
-def solution(k, room_number):
+def solution(_, room_number):
     rooms: typing.Dict[int, int] = dict()
     answer: typing.List[int] = []
 
