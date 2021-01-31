@@ -1,6 +1,8 @@
 /**
  * 2021.01.31 05:00
  * @see https://programmers.co.kr/learn/courses/30/lessons/64063
+ *
+ * union Find
  */
 class riflockle7_hotel_room_assignment {
     companion object {
