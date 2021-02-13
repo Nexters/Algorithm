@@ -30,7 +30,7 @@ NEXTERS 18th 알고리즘 스터디🙆‍♂️
 |:---:|:---:|:---:|
 | `1주차` | Hash | [호텔 방 배정](https://programmers.co.kr/learn/courses/30/lessons/64063) |
 | `2주차` | 완전탐색 | [연산자 끼워넣기](https://www.acmicpc.net/problem/14888) |
-| `3주차` |  |  |
+| `3주차` | DFS | [단지 번호 붙이기](https://www.acmicpc.net/problem/2667) |
 | `4주차` |  |  |
 
 ## 😊 `Contributor`
