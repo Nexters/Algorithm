@@ -24,9 +24,7 @@ def solution(_, room_number):
         if not rooms.get(idx):
             return idx
 
-        root = find(rooms[idx])
-        rooms[idx] = root
-        print(idx,root)
+        rooms[idx] = find(rooms[idx])
         return root
 
     for want in room_number:
@@ -34,13 +32,10 @@ def solution(_, room_number):
         # condition3에 의해, want 방번호 보다 큰 경우만 확인 하면 된다.
         rooms[able] = find(able + 1)  # condition2
         answer.append(able)
-
     return answer
 expect = [1,2,3,4,5,6,7,8,9,10]
 input_args = (10, (1,)*10)
 assert solution(*input_args) == expect
-
-
 
 """
 # O(n^2)
