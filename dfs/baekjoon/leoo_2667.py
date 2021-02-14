@@ -12,7 +12,7 @@ from collections import deque
 
 
 def is_not_out(y, x):
-    return all(0 <= i < N for i in (y, x))
+    return (0 <= y < N) and (0 <= x < N)
 
 
 def bfs(y, x):
