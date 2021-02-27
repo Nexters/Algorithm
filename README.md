@@ -26,12 +26,12 @@ NEXTERS 18th 알고리즘 스터디🙆‍♂️
 
 ## 👩‍💻`To Solve`
 
-|  | 자료구조 | 공통 문제 |
+|  | 유형 | 공통 문제 |
 |:---:|:---:|:---:|
 | `1주차` | Hash | [호텔 방 배정](https://programmers.co.kr/learn/courses/30/lessons/64063) |
 | `2주차` | 완전탐색 | [연산자 끼워넣기](https://www.acmicpc.net/problem/14888) |
 | `3주차` | DFS | [단지 번호 붙이기](https://www.acmicpc.net/problem/2667) |
-| `4주차` |  |  |
+| `4주차` | 시뮬레이션 | [거북이](https://www.acmicpc.net/problem/8911) |
 
 ## 😊 `Contributor`
 
