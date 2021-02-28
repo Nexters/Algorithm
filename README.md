@@ -32,6 +32,7 @@ NEXTERS 18th 알고리즘 스터디🙆‍♂️
 | `2주차` | 완전탐색 | [연산자 끼워넣기](https://www.acmicpc.net/problem/14888) |
 | `3주차` | DFS | [단지 번호 붙이기](https://www.acmicpc.net/problem/2667) |
 | `4주차` | 시뮬레이션 | [거북이](https://www.acmicpc.net/problem/8911) |
+| `5주차` |  |  |
 
 ## 😊 `Contributor`
 
