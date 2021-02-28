@@ -9,18 +9,18 @@ D = [(0,1),(0,-1),(1,0),(-1,0)] #동서남북
 def dfs(r,c):
     global house
     house += 1 #단지 내 집 수 +1
-    Map[r][c] = '0' #0으로 만들어주기(중요)
+    Map[r][c] = 0 #0으로 만들어주기(중요)
     for dr,dc in D: #네 방향을 보며
         nr, nc = r + dr, c + dc
-        if 0<=nr<N and 0<=nc<N and Map[nr][nc]=='1': #범위 내에 집이 있으면
+        if 0<=nr<N and 0<=nc<N and Map[nr][nc]: #범위 내에 집이 있으면
             dfs(nr,nc)
 
 N = int(input())
-Map = [list(map(str,input())) for _ in range(N)] #단지 지도 입력
+Map = [list(map(int,input())) for _ in range(N)] #단지 지도 입력
 cnt = 0;ans = [] #총 단지 수, 단지내 집의 수를 담을 배열
 for i in range(N):
     for j in range(N):
-        if Map[i][j]=='1': #만약 집이 있으면
+        if Map[i][j]: #만약 집이 있으면
             house = 0 #단지내 집 수 카운팅 시작
             cnt += 1 #총 단지 수 +1
             dfs(i,j) #dfs
