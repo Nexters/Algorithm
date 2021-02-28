@@ -67,11 +67,10 @@ for _ in range(int(input())): #테케 입력
     print(res)
 
 #ver 3 
-D = [(0,1),(1,0),(0,-1),(-1,0)] #북동남서
-for _ in range(int(input())): #테케 입력
-    order = input() #명령 입력
-    dr = 0 #direction, 처음에는 북쪽, D[0]이 북쪽에 해당하므로 dr은 처음에 0
-    x = [0];y = [0] #x,y의 좌표 담는 리스트
+D = [(0,1),(1,0),(0,-1),(-1,0)]
+for _ in range(int(input())):
+    order = input()
+    dr,x,y = 0,[0],[0] #방향, x좌표 배열, y좌표 배열
     for i in order:
         if i == 'L':
             dr = (dr-1)%4
@@ -83,5 +82,5 @@ for _ in range(int(input())): #테케 입력
         else:
             x.append(x[-1] - D[dr][0])
             y.append(y[-1] - D[dr][1])  
-    res = abs(max(x)-min(x)) * abs(max(y)-min(y)) 
+    res = (max(x)-min(x)) * (max(y)-min(y)) 
     print(res)
