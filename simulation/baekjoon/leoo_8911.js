@@ -111,3 +111,11 @@ function solution() {
 
   results.forEach((c) => console.log(c));
 }
+
+/*
+  4
+  FFLF
+  FFRRFF
+  FFFBBBRFFFBBB
+  FFBBLFFBBLFFBBLFFBBL => 16
+*/
