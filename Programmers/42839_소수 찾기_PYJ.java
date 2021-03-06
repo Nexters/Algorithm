@@ -1,5 +1,12 @@
 import java.util.*;
 
+/**
+ * 완전탐색(Brute Force Search)
+ * 프로그래머스 #42839 소수 찾기
+ * https://programmers.co.kr/learn/courses/30/lessons/42839
+ * 
+ * 종이 조각으로 만들 수 있는 소수가 몇개인지?
+**/
 class Solution {
     private static int cnt = 0;
     private static String[] map;
