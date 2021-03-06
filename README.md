@@ -19,10 +19,19 @@ NEXTERS 18th 알고리즘 스터디🙆‍♂️
 
 > 📆 2021.01.24 ~ 
 
-1. 일주일 최소 3문제
-2. 매주 일요일(21:00~22:00) 코드 리뷰
-3. 기출문제 중 1문제를 공통 문제로 선정
-4. 2문제는 공통 주제에 맞게 알아서 문제 풀이
+1. 일주일 최소 2문제 **깃허브**에 커밋 필수 
+   - 2문제 모두 공통문제로 선정
+   - 그중 1문제를 리뷰 문제로 선정
+2. 매주 일요일(21:00~22:00) 스터디 모임
+   - 리뷰문제 풀이 및 아이디어 공유
+   - 시간이 남으면 다른 공통문제에 대한 Q&A 
+3. 벌금 정책
+   - 일요일 스터디모임 불참 - 2000원
+   - 커밋 1회 - 1000원
+4. 각자 브랜치 폴더 및 파일 네이밍 규칙
+   - **최상위 폴더는 알고리즘 사이트 이름을 기준** (ex. BAEKJOON, Programmers ... )
+   - 파일 형식 : **문제 번호(번호가 있다면)_ 문제 이름_본인 이름 이니셜.확장자**
+5. 8주차 단위로 진행, 1-2주 휴식기간
 
 ## 👩‍💻`To Solve`
 
@@ -32,6 +41,7 @@ NEXTERS 18th 알고리즘 스터디🙆‍♂️
 | `2주차` | 완전탐색 | [연산자 끼워넣기](https://www.acmicpc.net/problem/14888) |
 | `3주차` | DFS | [단지 번호 붙이기](https://www.acmicpc.net/problem/2667) |
 | `4주차` | 시뮬레이션 | [거북이](https://www.acmicpc.net/problem/8911) |
+| `5주차` | 시뮬레이션 | [시그널](https://www.acmicpc.net/problem/16113) |
 
 ## 😊 `Contributor`
 
@@ -49,8 +59,7 @@ src="https://avatars1.githubusercontent.com/u/13694046" alt="drawing" width="80"
 </a>
 <a href="https://github.com/mcauto">
 <img style="width: 100%; height: 100%; object-fit: cover;"
-src="https://avatars1.githubusercontent.com/u/15080806" alt="drawing" width="80" />
-</a>
+src="https://avatars1.githubusercontent.com/u/15080806" alt="drawing" width="80" /</a>
 <a href="https://github.com/dlwlrma-io">
 <img style="width: 100%; height: 100%; object-fit: cover;"
 src="https://avatars1.githubusercontent.com/u/64605091" alt="drawing" width="80" />
