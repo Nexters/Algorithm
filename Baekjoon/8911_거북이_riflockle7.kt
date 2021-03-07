@@ -6,7 +6,7 @@ import java.io.InputStreamReader
  *
  * https://www.acmicpc.net/problem/8911
  */
-class riflockle7_tuttle {
+class `8911_거북이_riflockle7` {
     companion object {
         // 시계방향 (R 받을 시 ++ / L 받을 시 --)
         val direction = listOf(

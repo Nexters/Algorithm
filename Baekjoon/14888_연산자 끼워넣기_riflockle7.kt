@@ -6,7 +6,7 @@ import java.io.InputStreamReader
  *
  * https://www.acmicpc.net/problem/14888
  */
-object riflockle7_operator_embedding {
+object `14888_연산자 끼워넣기_riflockle7` {
     var min = Int.MAX_VALUE
     var max = Int.MIN_VALUE
 
