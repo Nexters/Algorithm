@@ -6,7 +6,7 @@ import java.io.InputStreamReader
  *
  * https://www.acmicpc.net/problem/14501
  */
-class riflockle7_leave {
+class `14501_퇴사_riflockle7` {
     companion object {
         var maxAmounts = Int.MIN_VALUE
 

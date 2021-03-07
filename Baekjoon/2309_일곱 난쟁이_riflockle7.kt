@@ -6,7 +6,7 @@ import java.io.InputStreamReader
  *
  * https://www.acmicpc.net/problem/2309
  */
-class riflockle7_seven_dwarfs {
+class `2309_일곱 난쟁이_riflockle7` {
     companion object {
         var answer: List<Int> = listOf()
 

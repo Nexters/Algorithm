@@ -7,7 +7,7 @@ import java.io.InputStreamReader
  *
  * https://www.acmicpc.net/problem/11047
  */
-class riflockle7_coin_zero {
+class `11047_동전0_riflockle7` {
     companion object {
         var N = Int.MIN_VALUE
         var K = Int.MIN_VALUE
