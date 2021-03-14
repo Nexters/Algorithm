@@ -8,7 +8,7 @@ def getNumber(startIdx, data):
     count = 0
     for curLine in data:
         subData = curLine[startIdx:startIdx + 6]
-        count += subData.count("1")
+        count += subData.trash_count("1")
     return NUMBERS.index(count)
 
 
