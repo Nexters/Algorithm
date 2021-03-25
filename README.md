@@ -35,13 +35,16 @@ NEXTERS 18th 알고리즘 스터디🙆‍♂️
 
 ## 👩‍💻`To Solve`
 
-|  | 유형 | 공통 문제 |
+|  | 유형 or 레벨 | 리뷰 문제 |
 |:---:|:---:|:---:|
 | `1주차` | Hash | [호텔 방 배정](https://programmers.co.kr/learn/courses/30/lessons/64063) |
 | `2주차` | 완전탐색 | [연산자 끼워넣기](https://www.acmicpc.net/problem/14888) |
 | `3주차` | DFS | [단지 번호 붙이기](https://www.acmicpc.net/problem/2667) |
 | `4주차` | 시뮬레이션 | [거북이](https://www.acmicpc.net/problem/8911) |
 | `5주차` | 시뮬레이션 | [시그널](https://www.acmicpc.net/problem/16113) |
+| `6주차` | 실버1 | [음식물 피하기](https://www.acmicpc.net/problem/1743) |
+| `7주차` | 골드5 | [치킨 배달](https://www.acmicpc.net/problem/15686) |
+| `8주차` | 실버2 | [상자넣기](https://www.acmicpc.net/problem/1965) |
 
 ## 😊 `Contributor`
 
