@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
+ * DFS
  * 백준 #2667 단지번호 붙이기
  * https://www.acmicpc.net/submit/2667
  *

@@ -137,6 +137,10 @@ pip-selfcheck.json
 
 # IntelliJ
 /out/
+*.iml
+
+# vscode
+.vscode/*
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
