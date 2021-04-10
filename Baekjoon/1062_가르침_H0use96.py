@@ -9,16 +9,14 @@ if __name__ == "__main__":
     maxResult = 0
     filtered_result = 0
 
-    # 데이터 받기
     origin_words = []
     for _ in range(word_count):
         origin_words.append(input())
 
-    # 기저사례
     if letter_count >= 21:
         print(word_count)
         exit()
-    if letter_count < 0:
+    if letter_count <= 0:
         print(0)
         exit()
 
@@ -37,16 +35,12 @@ if __name__ == "__main__":
             filtered_result += 1
         else:
             words.append(result)
-
-    # 기저사례 : antic
-    if letter_count == 0:
-        print(filtered_result)
-        exit(0)
-
     filter_letters = []
     for i in range(26):
         if letters[i]:
-            filter_letters.append(chr(i + ord('a')))
+            filter_letters.append(chr(i+ord('a')))
+
+
 
     combinations = list(itertools.combinations(filter_letters, letter_count))
 
@@ -62,4 +56,4 @@ if __name__ == "__main__":
                 count += 1
         maxResult = max(maxResult, count)
 
-    print(maxResult + filtered_result)
+    print(maxResult+filtered_result)
