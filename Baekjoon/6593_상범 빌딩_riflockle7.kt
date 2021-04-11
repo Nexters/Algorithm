@@ -1,5 +1,6 @@
 import java.io.BufferedReader
 import java.io.InputStreamReader
+import java.util.*
 
 /**
  * 6593_상범 빌딩_riflockle7
@@ -8,7 +9,8 @@ import java.io.InputStreamReader
  * 1. 로깅 내용 활성화로 인한 출력 오류
  * 2. 기존에는 이전의 방향처리 값을 받아 해당 값을 없애고 forEach 로 인한 메모리 초과 (visited 파라미터 형식으로 넘기도록 진행)
  * 3. 33% 에서 틀렸습니다가 나옴 (Trapped 오타 수정)
- * 4. (알수 없는 이유로 33% 에서 계속 틀렸습니다 가 나오고 있음 somebody help me.....)
+ * 4. bfs 문제를 dfs 로 풀고 있었음
+ * 5. 33% 에서 틀렸습니다가 나옴 (Trapped 오타 수정 재반복..)
  *
  * https://www.acmicpc.net/problem/6593
  */
@@ -20,7 +22,7 @@ class `6593_상범 빌딩_riflockle7` {
         var X = -1
         var start: Point? = null
         var end: Point? = null
-        var initUnVisited: MutableList<MutableList<MutableList<Boolean>>> = mutableListOf()
+        var table: MutableList<MutableList<MutableList<Boolean>>> = mutableListOf()
 
         val direction = listOf(
                 Point(1, 0, 0),
@@ -37,8 +39,8 @@ class `6593_상범 빌딩_riflockle7` {
             while (true) {
                 if (!input(br))
                     break
-                else
-                    start(0, start!!, initUnVisited)
+
+                answer = bfs(start!!)
 
                 if (answer != Int.MAX_VALUE)
                     println("Escaped in $answer minute(s).")
@@ -48,41 +50,55 @@ class `6593_상범 빌딩_riflockle7` {
             }
         }
 
-        fun start(newAnswer: Int, startIndex: Point, unVisited: MutableList<MutableList<MutableList<Boolean>>>) {
-            // println("${startIndex.x} ${startIndex.y} ${startIndex.z}")
-            if (startIndex.isArrived())
-                answer = Math.min(answer, newAnswer)
-            else {
-                val directions = direction.filter { startIndex.isBlocked(it, unVisited) }
-                directions.forEach {
-                    val newStartIndex = startIndex.copy(x = startIndex.x + it.x, y = startIndex.y + it.y, z = startIndex.z + it.z)
-                    if (newStartIndex.isValid() && newStartIndex.isOk()) {
-                        unVisited[startIndex.z][startIndex.y][startIndex.x] = false
-                        start(newAnswer + 1, newStartIndex, unVisited.toMutableList())
+        fun bfs(start: Point): Int {
+            val queue: Queue<Point> = LinkedList()
+            var time = 0
+
+            queue.add(start)
+            table[start.z][start.y][start.x] = false
+
+            while (!queue.isNullOrEmpty()) {
+                var size = queue.size
+
+                while (size-- > 0) {
+                    val item = queue.poll()
+
+                    direction.forEach {
+                        val newStart = item.copy(x = item.x + it.x, y = item.y + it.y, z = item.z + it.z)
+
+                        if (newStart.isValid()) {
+                            if (newStart.isArrived())
+                                return time + 1
+                            else if (!newStart.isVisited()) {
+                                table[newStart.z][newStart.y][newStart.x] = true
+                                queue.add(newStart)
+                            }
+                        }
                     }
                 }
+
+                time++
             }
+
+            return answer
         }
 
         fun clear(br: BufferedReader) {
             answer = Int.MAX_VALUE
-            Z = -1
-            Y = -1
             X = -1
+            Y = -1
+            Z = -1
             start = null
             end = null
-            initUnVisited = mutableListOf()
+            table = mutableListOf()
+            br.readLine()
         }
+
+        fun Point.isVisited() = table[z][y][x]
 
         fun Point.isValid(): Boolean {
             return x in 0 until X && y in 0 until Y && z in 0 until Z
         }
-
-        fun Point.isOk() = initUnVisited[z][y][x]
-
-        fun Point.isBlocked(direction: Point, visited: MutableList<MutableList<MutableList<Boolean>>>) =
-                Point(x + direction.x, y + direction.y, z + direction.z).isValid()
-                        && visited[z + direction.z][y + direction.y][x + direction.x]
 
         fun Point.isArrived(): Boolean = (this.x == end?.x && this.y == end?.y && this.z == end?.z)
 
@@ -108,25 +124,21 @@ class `6593_상범 빌딩_riflockle7` {
                         else if (value == "E")
                             end = Point(xIndex, yIndex, zIndex)
 
-                        value != "#"
+                        value == "#"
                     }.toMutableList()
 
                     floors.add(line)
                 }
 
-                br.readLine()
-
-                initUnVisited.add(floors)
+                if (zIndex != Z - 1)
+                    br.readLine()
+                table.add(floors)
             }
 
             return true
         }
 
         /** x, y, z 좌표 */
-        data class Point(
-                val x: Int,
-                val y: Int,
-                val z: Int
-        )
+        data class Point(val x: Int, val y: Int, val z: Int)
     }
 }
