@@ -1,7 +1,7 @@
 import java.util.*;
 
 /**
- * 완전탐색
+ * 완전탐색(Brute Force Search)
  * 프로그래머스 #42840 모의고사
  * https://programmers.co.kr/learn/courses/30/lessons/42840
  * 
